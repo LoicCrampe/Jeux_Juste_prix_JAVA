@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane stylesheets="@CSS/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <center>
+      <Group>
+         <children>
+            <VBox prefHeight="400.0" prefWidth="640.0" styleClass="Contour">
+               <children>
+                  <AnchorPane maxHeight="-1.0" maxWidth="-1.0" styleClass="Window" VBox.vgrow="ALWAYS">
+                     <children>
+                        <TextField fx:id="Prix" layoutX="149.0" layoutY="250.0" prefHeight="27.0" prefWidth="342.0" promptText="Entrez un prix entre 0 et 50 000 €" style="-fx-border-color: black;" />
+                        <Button fx:id="ButtonEnvoyer" layoutX="291.0" layoutY="298.0" mnemonicParsing="false" onAction="#ButtonEnvoyerOnClick" style="-fx-background-insets: 0;" styleClass="buttonEnvoyer" text="Envoyer">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                        <TextField fx:id="Resultat" editable="false" layoutX="136.0" layoutY="70.0" prefHeight="61.0" prefWidth="369.0" style="-fx-border-color: black; -fx-font-weight: 700;" text="Entrez un prix entre 0 et 50 000 €" AnchorPane.bottomAnchor="267.0" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="70.0" />
+                        <TextField fx:id="Reponses" alignment="CENTER" editable="false" layoutX="265.0" layoutY="175.0" prefHeight="25.0" prefWidth="111.0" promptText="Reponse" style="-fx-border-color: black; -fx-border-radius: 10px; -fx-font-weight: 700;" styleClass="Reponse">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </TextField>
+                        <TextField fx:id="nbrCoups" editable="false" layoutX="449.0" layoutY="336.0" prefHeight="25.0" prefWidth="167.0" style="-fx-border-color: black; -fx-border-radius: 10px; -fx-background-color: white; -fx-font-weight: 700; -fx-cursor: cursor;" styleClass="Reponse" text="Nombre de coup : 0" />
+                        <Button fx:id="Rejouer" layoutX="26.0" layoutY="336.0" mnemonicParsing="false" onAction="#rejouer" styleClass="Rejouer" text="Rejouer" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </Group>
+   </center>
+   <top>
+      <MenuBar styleClass="Window2" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="New" />
+                  <MenuItem mnemonicParsing="false" text="Open…" />
+                  <Menu mnemonicParsing="false" text="Open Recent" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  <MenuItem mnemonicParsing="false" text="Save As…" />
+                  <MenuItem mnemonicParsing="false" text="Revert" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Preferences…" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Quit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Undo" />
+                  <MenuItem mnemonicParsing="false" text="Redo" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Cut" />
+                  <MenuItem mnemonicParsing="false" text="Copy" />
+                  <MenuItem mnemonicParsing="false" text="Paste" />
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Select All" />
+                  <MenuItem mnemonicParsing="false" text="Unselect All" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="10.0" styleClass="Window2" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="10.0" styleClass="Window2" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="10.0" prefWidth="200.0" styleClass="Window2" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
